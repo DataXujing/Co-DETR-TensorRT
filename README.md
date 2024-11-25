@@ -273,8 +273,14 @@ TensorRT C++的推理Demo:
 | ------------------------- | ----------------------- |
 | ![](test_res/final_0.jpg) | ![](test_res/final.jpg) |
 
-+ Co-DETR TensorRT的实现，坑确实比较多，参考的网络资源基本没有
-+ 我们将soft-nms算子删除，替换为TensorRT EfficientNMS Plugin
-+ 我们在windows下编译了TensorRT Plugin grid_sampler
+### 7. Linux如何编译该程序
+
++ 我提供了在Linux下编译Co-DETR进行端到端推理的代码，请参考`linux_cc/`,其中`plugin`为grid_sampler plugin的编译， `co_detr`为Co-DETR的TensorRT调用。
+
+> [!NOTE]\
+>
+> + Co-DETR TensorRT的实现，坑确实比较多，参考的网络资源基本没有
+> + 我们将soft-nms算子删除，替换为TensorRT EfficientNMS Plugin
+> + 我们在windows下编译了TensorRT Plugin grid_sampler
 
 最终成功实现了Co-DETR的端到端的TensorRT 模型推理异构计算加速推理！
