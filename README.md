@@ -102,6 +102,14 @@ python mmdeploy/tools/deploy.py \
 polygraphy surgeon sanitize end2end.onnx --fold-constants -o end2end_folded.onnx
 python -m onnxsim end2end_folded.onnx end2end_folded_sim.onnx
 ```
+注意：
+
+```
+# 常量折叠和simplifier涉及到的库的版本
+polygraphy==0.49.0
+onnxruntime-gpu==1.19.2
+onnx-simplifier=0.4.36
+```
 
 
 
